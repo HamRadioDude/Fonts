@@ -31,7 +31,7 @@ class FontInfoViewController: UIViewController {
     
     @IBAction func slideFontSize(slider: UISlider){
         let newSize = roundf(slider.value)
-        fontSampleLabel.text = "\(Int(font.pointSize))"
+        fontSampleLabel.font = font.withSize(CGFloat(newSize))
         fontSizeLabel.text = "\(Int(newSize))"
         
     }

@@ -201,7 +201,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xCc-1q-qfo">
-                                <rect key="frame" x="312" y="579" width="49" height="31"/>
+                                <rect key="frame" x="312" y="579" width="51" height="31"/>
                                 <connections>
                                     <action selector="toggleFavoriteWithSender:" destination="BrW-lW-Tvw" eventType="valueChanged" id="cU6-sd-elt"/>
                                 </connections>
@@ -225,10 +225,12 @@
                             <constraint firstItem="6jn-Hb-ZGq" firstAttribute="trailing" secondItem="qF1-0X-FBw" secondAttribute="trailing" constant="10" id="9up-pN-6pB"/>
                             <constraint firstItem="xCc-1q-qfo" firstAttribute="leading" secondItem="F5k-1L-Prd" secondAttribute="trailing" constant="21" id="CRH-Z3-3Wj"/>
                             <constraint firstItem="6jn-Hb-ZGq" firstAttribute="trailing" secondItem="SMP-nM-WhN" secondAttribute="trailing" constant="16" id="HYi-MB-gNr"/>
+                            <constraint firstItem="xCc-1q-qfo" firstAttribute="leading" secondItem="F5k-1L-Prd" secondAttribute="trailing" constant="21" id="Owb-jx-IfA"/>
                             <constraint firstItem="6jn-Hb-ZGq" firstAttribute="bottom" secondItem="zcl-cD-CLc" secondAttribute="bottom" constant="20" id="Rni-XI-SqW"/>
                             <constraint firstItem="SMP-nM-WhN" firstAttribute="top" secondItem="6jn-Hb-ZGq" secondAttribute="top" constant="30" id="Tb7-aH-NXd"/>
                             <constraint firstItem="zcl-cD-CLc" firstAttribute="leading" secondItem="6jn-Hb-ZGq" secondAttribute="leading" constant="16" id="cmS-e9-gNc"/>
                             <constraint firstItem="F5k-1L-Prd" firstAttribute="top" relation="greaterThanOrEqual" secondItem="SMP-nM-WhN" secondAttribute="bottom" constant="10" id="hCJ-bC-8em"/>
+                            <constraint firstItem="qF1-0X-FBw" firstAttribute="top" secondItem="xCc-1q-qfo" secondAttribute="bottom" constant="16" id="kg0-ZP-MYe"/>
                             <constraint firstItem="qF1-0X-FBw" firstAttribute="leading" secondItem="zcl-cD-CLc" secondAttribute="trailing" constant="8" id="lXS-Hz-C9G"/>
                             <constraint firstItem="zcl-cD-CLc" firstAttribute="top" secondItem="F5k-1L-Prd" secondAttribute="bottom" constant="12" id="xOo-gC-GQt"/>
                         </constraints>
