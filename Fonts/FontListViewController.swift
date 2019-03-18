@@ -62,8 +62,16 @@ class FontListViewController: UITableViewController {
         let indexPath = tableView.indexPath(for: tableViewCell)!
         let font = fontForDisplay(atIndexPath: indexPath as NSIndexPath)
         
-        let sizesVC = segue.destination as! FontSizesViewController
-        sizesVC.title = font.fontName
-        sizesVC.font = font
+        if segue.identifier == "ShowFontSizes" {
+            let sizesVC = segue.destination as! FontSizesViewController
+            sizesVC.title = font.fontName
+            sizesVC.font = font
+        } else {
+        let infoVC = segue.destination as! FontInfoViewController
+            infoVC.title = font.fontName
+            infoVC.font = font
+            infoVC.favorite = FavoritesList.sharedFavoritesList.favorites.contains(font.fontName)
+        
+        }
     }
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F304721223FE270003F7ED3 /* FontListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F304720223FE270003F7ED3 /* FontListViewController.swift */; };
 		3F3047252240302B003F7ED3 /* FontSizesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3047242240302B003F7ED3 /* FontSizesViewController.swift */; };
+		3F872140224038A200A35F71 /* FontInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F87213F224038A200A35F71 /* FontInfoViewController.swift */; };
 		3FF439B6223EC24C00A3386D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF439B5223EC24C00A3386D /* AppDelegate.swift */; };
 		3FF439BB223EC24C00A3386D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF439B9223EC24C00A3386D /* Main.storyboard */; };
 		3FF439BD223EC24E00A3386D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FF439BC223EC24E00A3386D /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		3F304720223FE270003F7ED3 /* FontListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontListViewController.swift; sourceTree = "<group>"; };
 		3F3047242240302B003F7ED3 /* FontSizesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSizesViewController.swift; sourceTree = "<group>"; };
+		3F87213F224038A200A35F71 /* FontInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontInfoViewController.swift; sourceTree = "<group>"; };
 		3FF439B2223EC24C00A3386D /* Fonts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fonts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FF439B5223EC24C00A3386D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FF439BA223EC24C00A3386D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				3FF439C9223EC61000A3386D /* RootViewController.swift */,
 				3F304720223FE270003F7ED3 /* FontListViewController.swift */,
 				3F3047242240302B003F7ED3 /* FontSizesViewController.swift */,
+				3F87213F224038A200A35F71 /* FontInfoViewController.swift */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				3F3047252240302B003F7ED3 /* FontSizesViewController.swift in Sources */,
 				3FF439B6223EC24C00A3386D /* AppDelegate.swift in Sources */,
 				3F304721223FE270003F7ED3 /* FontListViewController.swift in Sources */,
+				3F872140224038A200A35F71 /* FontInfoViewController.swift in Sources */,
 				3FF439C8223EC37100A3386D /* FavoritesList.swift in Sources */,
 				3FF439CA223EC61000A3386D /* RootViewController.swift in Sources */,
 			);

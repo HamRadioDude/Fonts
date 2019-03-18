@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -110,7 +111,8 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="NDE-Jx-sVA" kind="show" id="V5Q-hI-Pfm"/>
+                                    <segue destination="NDE-Jx-sVA" kind="show" identifier="ShowFontSizes" id="V5Q-hI-Pfm"/>
+                                    <segue destination="BrW-lW-Tvw" kind="show" trigger="accessoryAction" id="bS2-Hx-rnr"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -167,6 +169,81 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KVx-T2-oAO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1948" y="166"/>
+        </scene>
+        <!--Font Info View Controller-->
+        <scene sceneID="Z4O-S8-Rsv">
+            <objects>
+                <viewController id="BrW-lW-Tvw" customClass="FontInfoViewController" customModule="Fonts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2JR-At-f0G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMP-nM-WhN">
+                                <rect key="frame" x="16" y="94" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="zcl-cD-CLc">
+                                <rect key="frame" x="14" y="617" width="303" height="31"/>
+                                <connections>
+                                    <action selector="slideFontSizeWithSlider:" destination="BrW-lW-Tvw" eventType="valueChanged" id="h1O-Ai-csV"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Include in Favorites" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5k-1L-Prd">
+                                <rect key="frame" x="144" y="584" width="147" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="147" id="9Fc-h9-SQP"/>
+                                    <constraint firstAttribute="height" constant="21" id="nDs-eD-Kmm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xCc-1q-qfo">
+                                <rect key="frame" x="312" y="579" width="49" height="31"/>
+                                <connections>
+                                    <action selector="toggleFavoriteWithSender:" destination="BrW-lW-Tvw" eventType="valueChanged" id="cU6-sd-elt"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qF1-0X-FBw">
+                                <rect key="frame" x="323" y="626" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="0ky-i1-vPZ"/>
+                                    <constraint firstAttribute="height" constant="21" id="T8y-Rs-c4k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration" identifier="ShowFontInfo"/>
+                        <constraints>
+                            <constraint firstItem="SMP-nM-WhN" firstAttribute="leading" secondItem="6jn-Hb-ZGq" secondAttribute="leading" constant="16" id="6R2-30-LY9"/>
+                            <constraint firstItem="6jn-Hb-ZGq" firstAttribute="bottom" secondItem="qF1-0X-FBw" secondAttribute="bottom" constant="20" id="7uk-aj-M8A"/>
+                            <constraint firstItem="6jn-Hb-ZGq" firstAttribute="trailing" secondItem="qF1-0X-FBw" secondAttribute="trailing" constant="10" id="9up-pN-6pB"/>
+                            <constraint firstItem="xCc-1q-qfo" firstAttribute="leading" secondItem="F5k-1L-Prd" secondAttribute="trailing" constant="21" id="CRH-Z3-3Wj"/>
+                            <constraint firstItem="6jn-Hb-ZGq" firstAttribute="trailing" secondItem="SMP-nM-WhN" secondAttribute="trailing" constant="16" id="HYi-MB-gNr"/>
+                            <constraint firstItem="6jn-Hb-ZGq" firstAttribute="bottom" secondItem="zcl-cD-CLc" secondAttribute="bottom" constant="20" id="Rni-XI-SqW"/>
+                            <constraint firstItem="SMP-nM-WhN" firstAttribute="top" secondItem="6jn-Hb-ZGq" secondAttribute="top" constant="30" id="Tb7-aH-NXd"/>
+                            <constraint firstItem="zcl-cD-CLc" firstAttribute="leading" secondItem="6jn-Hb-ZGq" secondAttribute="leading" constant="16" id="cmS-e9-gNc"/>
+                            <constraint firstItem="F5k-1L-Prd" firstAttribute="top" relation="greaterThanOrEqual" secondItem="SMP-nM-WhN" secondAttribute="bottom" constant="10" id="hCJ-bC-8em"/>
+                            <constraint firstItem="qF1-0X-FBw" firstAttribute="leading" secondItem="zcl-cD-CLc" secondAttribute="trailing" constant="8" id="lXS-Hz-C9G"/>
+                            <constraint firstItem="zcl-cD-CLc" firstAttribute="top" secondItem="F5k-1L-Prd" secondAttribute="bottom" constant="12" id="xOo-gC-GQt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6jn-Hb-ZGq"/>
+                    </view>
+                    <connections>
+                        <outlet property="favoriteSwitch" destination="xCc-1q-qfo" id="0eJ-Ar-S8c"/>
+                        <outlet property="fontSampleLabel" destination="SMP-nM-WhN" id="uYn-s7-dFd"/>
+                        <outlet property="fontSizeLabel" destination="qF1-0X-FBw" id="mWV-6o-2of"/>
+                        <outlet property="fontSizeSlider" destination="zcl-cD-CLc" id="deN-Xv-avj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vMH-AG-qhL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2736.8000000000002" y="167.76611694152925"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zDc-Lm-RIu">
