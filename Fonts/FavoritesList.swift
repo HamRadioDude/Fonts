@@ -15,8 +15,8 @@ class FavoritesList {
     
     init() {
         let defaults = UserDefaults.standard
-        let storedFavorites = defaults.object(forKey: "favorites") as? String
-        favorites = storedFavorites != nil ? [storedFavorites!] : []
+        let storedFavorites = defaults.object(forKey: "favorites") as? [String]
+        favorites = storedFavorites != nil ? storedFavorites! : []
     
         }
     

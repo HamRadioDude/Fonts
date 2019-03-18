@@ -11,11 +11,7 @@ import UIKit
 
 
 class RootViewController: UITableViewController {
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        tableView.reloadData()
-    }
-    
+  
     private var familyNames: [String]!
     private var cellPointSize: CGFloat!
     private var favoritesList: FavoritesList!
@@ -37,8 +33,9 @@ class RootViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     
-        familyNames = (UIFont.familyNames() as [String]).sorted()
+        familyNames = (UIFont.familyNames as [String]).sorted()
         let preferredTableViewFont = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.headline)
         cellPointSize = preferredTableViewFont.pointSize
         favoritesList = FavoritesList.sharedFavoritesList
@@ -46,6 +43,11 @@ class RootViewController: UITableViewController {
         
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
 
     // MARK: - Table view data source
 
